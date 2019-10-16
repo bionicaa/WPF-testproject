@@ -1,0 +1,46 @@
+﻿<Window x:Class="TestProject.Views.MainWindowView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"      
+        xmlns:uc="clr-namespace:TestProject.Controls"
+        xmlns:local="clr-namespace:TestProject"
+        xmlns:vm="clr-namespace:TestProject.ViewModels"
+        xmlns:c="clr-namespace:TestProject.ViewModels"
+        mc:Ignorable="d"     
+        DataContext="{Binding RelativeSource={RelativeSource Self}}"
+        Title="Window" Height="600" Width="1000">
+    <Grid Margin="5">
+        <Grid.Resources>
+
+        </Grid.Resources>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition MinWidth="100" />
+            <ColumnDefinition MinWidth="100" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition MinHeight="50"  />
+            <RowDefinition MinHeight="50"  />
+            <RowDefinition MinHeight="50"  />
+            <RowDefinition MinHeight="50"  />
+            <RowDefinition MinHeight="50"  />
+        </Grid.RowDefinitions>
+
+        <uc:List  Grid.Row="1" Grid.ColumnSpan="3" Grid.RowSpan="4"/>
+
+        <!--
+        <CheckBox Margin="117,10,115,86" Width="13" Height="12" Grid.Row="1" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center" IsChecked="{Binding Active}" RenderTransformOrigin="0.506,-1.976"></CheckBox>
+        <CheckBox Margin="117,50,115,46" Width="13" Height="12" Grid.Row="1" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center" IsChecked="{Binding Active}" RenderTransformOrigin="0.506,-1.976"></CheckBox>
+        <CheckBox Margin="117,86,115,10" Width="13" Height="12" Grid.Row="1" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center" IsChecked="{Binding Active}" RenderTransformOrigin="0.506,-1.976"></CheckBox>
+        <CheckBox Margin="117,33,115,63" Width="13" Height="12" Grid.Row="2" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center" IsChecked="{Binding Active}" RenderTransformOrigin="0.506,-1.976"></CheckBox>
+-->
+        <WrapPanel Grid.Row="5" Grid.Column="3" HorizontalAlignment="Left">
+            <Button Margin="20" Width="200" Height="30" x:Name="Append" Content="{Binding Populate}" Background="DarkOrange"></Button>
+            <Button HorizontalAlignment="Left" Margin="20,0,0,0" Width="200" Height="30" x:Name="Remove" Content="{Binding Member}" Background="OrangeRed"></Button>
+        </WrapPanel>
+
+    </Grid>
+</Window>
